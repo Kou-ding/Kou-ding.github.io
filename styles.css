@@ -14,7 +14,7 @@ body {
 
 /* Header and navigation */
 header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: rgb(20, 20, 20, 0.9);
     color: white;
     padding: 1rem 0;
     position: fixed;
@@ -61,17 +61,37 @@ main {
 }
 
 /* Hero section */
+/* Hero section */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><rect width="1200" height="400" fill="%23e0e0e0"/><text x="50%" y="50%" text-anchor="middle" dy=".3em" font-family="Arial" font-size="24" fill="%23999">Hero Background</text></svg>');
+    position: relative; /* Required for pseudo-element positioning */
+    background-image: url("media/2560x1440-Emperor-Penguins-With-Chicks.jpg");
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
+    color: white; /* Default text color */
+}
+
+/* Pseudo-element for background overlay */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Black with 40% opacity */
+    z-index: 1; /* Ensure it's behind the content */
+}
+
+/* Adjust content to be above the overlay */
+.hero-content {
+    position: relative;
+    z-index: 2;
 }
 
 .hero-content h1 {
