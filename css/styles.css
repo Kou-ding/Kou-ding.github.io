@@ -12,48 +12,6 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Header and navigation */
-header {
-    background: rgb(20, 20, 20, 0.9);
-    color: white;
-    padding: 1rem 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    transition: opacity 0.3s ease;
-}
-
-.nav-links a:hover {
-    opacity: 0.8;
-}
-
 /* Main content */
 main {
     margin-top: 80px;
@@ -61,10 +19,9 @@ main {
 }
 
 /* Hero section */
-/* Hero section */
 .hero {
     position: relative; /* Required for pseudo-element positioning */
-    background-image: url("media/2560x1440-Emperor-Penguins-With-Chicks.jpg");
+    background-image: url("../images/hero-image.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -73,7 +30,7 @@ main {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white; /* Default text color */
+    color: white;
 }
 
 /* Pseudo-element for background overlay */
@@ -170,14 +127,6 @@ main {
 .card h3 {
     color: #667eea;
     margin-bottom: 1rem;
-}
-
-/* Footer */
-footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 2rem 0;
 }
 
 /* Animations */

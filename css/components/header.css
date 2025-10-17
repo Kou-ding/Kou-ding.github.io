@@ -1,0 +1,62 @@
+/* Header and navigation */
+header {
+    background: rgb(20, 20, 20, 0.9);
+    color: white;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+/* Style the logo container */
+.logo {
+    display: flex;
+    align-items: center; /* Align image and text vertically */
+    gap: 0.5rem; /* Space between image and text */
+}
+
+/* Style the logo image */
+.logo-img {
+    width: 40px; /* Adjust size */
+    height: 40px; /* Adjust size */
+    background-image: url('../../images/pfp.png'); 
+    border-radius: 5px; /* Adjust the value (e.g., 5px, 10%, 50% for circle) */
+    background-size: cover; /* Cover the div area */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Don't repeat */
+}
+
+/* Style the logo text */
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    /* Adjust color if needed, though header color is white */
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+}
+

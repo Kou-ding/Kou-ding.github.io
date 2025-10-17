@@ -4,79 +4,136 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects Showcase</title>
-    <link rel="stylesheet" href="styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Styling through CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components/header.css">
+    <link rel="stylesheet" href="css/components/footer.css">
+
+    <!-- Include Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">Kouding's Projects</div>
+            <div class="logo">
+                <div class="logo-img"></div> <!-- Div styled with background image -->
+                <span class="logo-text">Kou-ding's Projects</span> <!-- The text next to the image -->
+            </div>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+        <!-- Hero Section -->
         <section id="home" class="hero">
             <div class="hero-content">
-                <h1>Kouding Projects Showcase</h1>
-                <p>Kou-ding: Kou=光=Light + Coding </p>
+                <h1>Kou-ding's Projects Showcase</h1>
+                <p>A collection of repositories highlighting personal and university projects.</p>
                 <a href="#about" class="btn">See all repositories</a>
             </div>
         </section>
 
-        <section id="about" class="section">
+        <!-- Personal Repositories Section -->
+        <section id="repositories" class="section">
             <div class="container">
-                <h2>About Us</h2>
-                <p style="text-align: center; font-size: 1.1rem; max-width: 800px; margin: 0 auto;">
-                    We create beautiful, functional websites that help businesses grow and connect with their audience. 
-                    Our team is passionate about modern web technologies and user-centered design.
-                </p>
-            </div>
-        </section>
-
-        <section id="services" class="section">
-            <div class="container">
-                <h2>Our Services</h2>
+                <h2>Personal Repositories <i class="fa-solid fa-user"></i></h2>
                 <div class="cards">
                     <div class="card">
-                        <h3>Web Design</h3>
-                        <p>Creating visually stunning and user-friendly website designs that capture your brand's essence and engage your visitors.</p>
+                        <h3>Arch-Tutorial</h3>
+                        <p>A very detailed tutorial bundle on mastering various aspects of linux and programming.</p>
+                        <h5 style="margin-top: 1rem;"><a href="https://github.com/Kou-ding/Arch-Tutorial">Github link</a></h5>
                     </div>
                     <div class="card">
-                        <h3>Development</h3>
-                        <p>Building robust, scalable web applications using the latest technologies and best practices for optimal performance.</p>
+                        <h3>Mushroom-Classifier</h3>
+                        <p>A neural networked that specializes in distinguishing between poisonous and edible mushrooms.</p>
+                        <h5 style="margin-top: 1rem;"><a href="https://github.com/Kou-ding/Mushroom-Classifier">Github link</a></h5>
                     </div>
                     <div class="card">
                         <h3>SEO Optimization</h3>
                         <p>Improving your website's visibility in search engines to drive more organic traffic and grow your online presence.</p>
                     </div>
+                    <div class="card">
+                        <h3>SEO Optimization</h3>
+                        <p>Improving your website's visibility in search engines to drive more organic traffic and grow your online presence.</p>
+                    </div>
+                    <div class="card">
+                        <h3>SEO Optimization</h3>
+                        <p>Improving your website's visibility in search engines to drive more organic traffic and grow your online presence.</p>
+                    </div>
+                    <div class="card">
+                        <h3>SEO Optimization</h3>
+                        <p>Improving your website's visibility in search engines to drive more organic traffic and grow your online presence.</p>
+                    </div>
+
                 </div>
             </div>
         </section>
 
+        <!-- University Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2>University Projects <i class="fa-solid fa-graduation-cap"></i></h2>
+                <div class="cards">
+                    <div class="card">
+                        <h3>Arch-Tutorial</h3>
+                        <p>A very detailed tutorial bundle on mastering various aspects of linux and programming.</p>
+                        <h5 style="margin-top: 1rem;"><a href="https://github.com/Kou-ding/Arch-Tutorial">Github link</a></h5>
+                    </div>
+                    <div class="card">
+                        <h3>Mushroom-Classifier</h3>
+                        <p>A neural networked that specializes in distinguishing between poisonous and edible mushrooms.</p>
+                        <h5 style="margin-top: 1rem;"><a href="https://github.com/Kou-ding/Mushroom-Classifier">Github link</a></h5>
+                    </div>
+                    <div class="card">
+                        <h3>SEO Optimization</h3>
+                        <p>Improving your website's visibility in search engines to drive more organic traffic and grow your online presence.</p>
+                    </div>
+                    <div class="card">
+                        <h3>SEO Optimization</h3>
+                        <p>Improving your website's visibility in search engines to drive more organic traffic and grow your online presence.</p>
+                    </div>
+                    <div class="card">
+                        <h3>SEO Optimization</h3>
+                        <p>Improving your website's visibility in search engines to drive more organic traffic and grow your online presence.</p>
+                    </div>
+                    <div class="card">
+                        <h3>SEO Optimization</h3>
+                        <p>Improving your website's visibility in search engines to drive more organic traffic and grow your online presence.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Me Section -->
         <section id="contact" class="section">
             <div class="container">
                 <h2>Get In Touch</h2>
                 <p style="text-align: center; font-size: 1.1rem;">
-                    Ready to start your next project? We'd love to hear from you!
+                    Would you like to collaborate on a project or have any questions? Feel free to reach out!
                 </p>
                 <div style="text-align: center; margin-top: 2rem;">
-                    <a href="mailto:hello@mywebsite.com" class="btn">Contact Us</a>
+                    <a href="mailto:kpapadak@ece.auth.gr" class="btn">Contact Me</a>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Footer Section -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 MyWebsite. All rights reserved.</p>
+            <p>&copy; 2025 Kou-ding <i class="fa-brands fa-github"></i>. All rights reserved.</p>
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="script.js"></script>
 </body>
 </html>
