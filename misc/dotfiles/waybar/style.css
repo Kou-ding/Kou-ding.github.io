@@ -1,0 +1,75 @@
+* {
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    font-family: "JetBrainsMono";
+    font-weight: bold;
+    font-size: 16px;
+    padding: 0;
+}
+
+window#waybar {
+    background: #101010;
+    border-bottom: 2px solid #633030;
+}
+
+tooltip {
+    background-color: #101010;
+    border: 2px solid #633030;
+}
+
+#clock,#tray,#cpu,#memory,#battery,#network,#pulseaudio,#custom-power {
+    margin: 6px 6px 6px 0px;
+    padding: 2px 8px;
+}
+#mode {
+    margin: 6px 6px 6px 12px;
+    padding: 2px 8px;
+}
+
+#workspaces {
+    background-color: #322828;
+    margin: 6px 0px 6px 6px;
+    border: 2px solid #624343;
+}
+
+#workspaces button {
+    all: initial;
+    min-width: 0;
+    box-shadow: inset 0 -3px transparent;
+    padding: 2px 4px;
+    color: #915353;
+}
+
+#workspaces button.focused {
+    color: #dda1a1;
+}
+
+#workspaces button.urgent {
+    background-color: #e78a4e;
+    color: #1d2021;
+}
+
+#clock,#mode {
+    background-color: #322828;
+    border: 2px solid #624343;
+    color: #d49898;
+}
+
+#tray,#cpu,#memory,#network,#pulseaudio,#battery,#power,#custom-power {
+    background-color: #c98282;
+    border: 2px solid #915353;
+    color: #1d2021;
+}
+
+#tray:hover,#cpu:hover,#memory:hover,#network:hover,#pulseaudio:hover,#battery:hover,#power:hover,#custom-power:hover {
+    background-color: #322828;
+    border: 2px solid #625343;
+    color: #d49898;
+}
+
+#clock:hover {
+    background-color: #d49898;
+    color: #322828;
+    border: 2px solid #d49898;
+}

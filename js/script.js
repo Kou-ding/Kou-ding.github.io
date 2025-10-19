@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (savedTheme) {
         setTheme(savedTheme);
     } else {
-        setTheme(''); // Default to light mode if no preference is saved
+        setTheme('dark-mode'); // Default to dark mode if no preference is saved
     }
 
     // Attach the toggleTheme function to the button's click event

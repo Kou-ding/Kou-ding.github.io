@@ -1,0 +1,73 @@
+/* css/dotfiles.css */
+
+/* Optional: Specific styles for the dotfiles section */
+.section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem; /* Reduced margin if followed by paragraph */
+    color: var(--text-color-2);
+}
+
+.section p {
+    color: var(--text-color); /* Ensure text color matches theme */
+}
+
+/* Style for each dotfile entry */
+.dotfile-entry {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    align-items: center; /* Vertically center items */
+    margin-bottom: 3rem; /* Space between entries */
+    padding: 1rem; /* Internal padding */
+    border: 1px solid var(--pfp-border); /* Use theme variable for border */
+    border-radius: 8px; /* Rounded corners */
+    background-color: var(--card-bg); /* Use theme variable for background */
+}
+
+/* Style for the info section (text and button) */
+.dotfile-info {
+    flex: 1; /* Take up available space */
+    min-width: 250px; /* Minimum width before wrapping */
+    padding-right: 1.5rem; /* Space between info and image */
+}
+
+.dotfile-info h3 {
+    color: var(--text-color-2); /* Use theme variable for title */
+    margin-bottom: 0.5rem;
+}
+
+.dotfile-info p {
+    margin-bottom: 1rem;
+    color: var(--text-color); /* Use theme variable for description */
+    line-height: 1.5; /* Improve readability */
+}
+
+.btn-download {
+    /* Inherits styles from the general .btn class defined in styles.css */
+    /* You can add specific styles here if needed */
+    display: inline-flex; /* Align icon and text */
+    align-items: center;
+    gap: 0.5rem; /* Space between icon and text */
+}
+
+/* Style for the image section */
+.dotfile-image {
+    flex: 1; /* Take up available space */
+    min-width: 250px; /* Minimum width before wrapping */
+    text-align: center; /* Center the image */
+}
+
+.dotfile-image img {
+    max-width: 100%; /* Ensure image doesn't overflow container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: Rounded corners for images */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow */
+}
+
+/* Optional: Style for the divider */
+.divider {
+    border: 0;
+    height: 1px;
+    background: var(--pfp-border); /* Use theme variable */
+    margin: 2rem 0; /* Space above and below */
+}
