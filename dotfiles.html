@@ -20,20 +20,30 @@
 <body>
     <header>
         <nav>
-            <div class="logo">
-                <div class="logo-img"></div> <!-- Div styled with background image -->
-                <span class="logo-text">Kou-ding's Projects</span> <!-- The text next to the image -->
+            <div class="logo-container">
+                <div class="logo-img"></div>
+                <span class="logo-text">Kou-ding's Projects</span>
             </div>
 
-            <button id="theme-toggle" class="theme-toggle-btn">
-                <i class="fa-solid fa-moon"></i>
-            </button>
+            <!-- Hamburger menu icon (visible on mobile) -->
+            <div class="hamburger" id="hamburger-menu">
+                <i class="fas fa-bars"></i> <!-- Or use an SVG icon -->
+            </div>
 
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="dotfiles.html" class="active">Dotfiles</a></li>
-                <li><a href="about.html">About Me</a></li>
-            </ul>
+            <div class="right-elements-container">
+                <button id="theme-toggle" class="theme-toggle-btn">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <!-- Navigation links container (hidden on mobile by default) -->
+                <div class="nav-links-container">
+                    <ul class="nav-links" id="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="dotfiles.html">Dotfiles</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 

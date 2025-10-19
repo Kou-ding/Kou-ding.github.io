@@ -40,6 +40,19 @@ function toggleTheme() {
     }
 }
 
+// Mobile menu toggle functionality
+function toggleMobileMenu() {
+    const navLinks = document.getElementById('nav-links');
+    const hamburger = document.getElementById('hamburger-menu');
+    navLinks.classList.toggle('active');
+    // Optional: Change hamburger icon (e.g., to 'X')
+    if (navLinks.classList.contains('active')) {
+        hamburger.innerHTML = '<i class="fas fa-times"></i>';
+    } else {
+        hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+    }
+}
+
 // Initialize the theme when the page loads
 // Check localStorage for a saved theme, otherwise default to light
 document.addEventListener('DOMContentLoaded', function() {
@@ -55,4 +68,17 @@ document.addEventListener('DOMContentLoaded', function() {
     if (themeToggleBtn) {
         themeToggleBtn.addEventListener('click', toggleTheme);
     }
+
+    // Attach the toggleMobileMenu function to the hamburger icon's click event
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    if (hamburgerMenu) {
+        console.log("Script.js: Found hamburger menu, attaching listener.");
+        hamburgerMenu.addEventListener('click', toggleMobileMenu);
+        console.log("Script.js: Listener attached to hamburger menu.");
+    } else {
+        console.warn("Script.js: Could not find hamburger menu (#hamburger-menu).");
+    }
+    console.log("Script.js: DOMContentLoaded initialization complete.");
 });
+
+

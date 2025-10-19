@@ -99,3 +99,73 @@ nav {
 .theme-toggle-btn:hover {
     background-color: var(--header-theme-toggle-hover);
 }
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    nav {
+        /* Consider changing justify-content if you add a hamburger */
+        /* For now, just reduce padding and font sizes */
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .logo-text {
+        font-size: 1rem; /* Even smaller text on very small screens */
+    }
+
+    .nav-links {
+        gap: 1rem; /* Further reduce gap */
+    }
+
+    .nav-links a {
+        font-size: 0.9rem; /* Further reduce link text size */
+    }
+
+    /* Example: Hide nav links and show a hamburger menu */
+    .nav-links {
+        display: none; /* Hide the links initially on mobile */
+        position: absolute; /* Position the menu overlay */
+        top: 100%; /* Position just below the header */
+        left: 0;
+        right: 0;
+        background: var(--header-bg); /* Match header background */
+        flex-direction: column; /* Stack links vertically */
+        align-items: center; /* Center links */
+        padding: 1rem 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Add shadow for separation */
+    }
+
+    /* Show the menu when toggled (requires JS) */
+    .nav-links.active {
+        display: flex; /* Show when active class is added */
+    }
+
+    /* Style links when shown in the mobile menu */
+    .nav-links li {
+        margin: 0.5rem 0; /* Add space between mobile links */
+    }
+
+    /* Add a hamburger icon */
+    .hamburger {
+        display: block; /* Show hamburger only on mobile */
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: var(--header-text-color);
+    }
+
+    /* Hide hamburger on larger screens */
+    @media (min-width: 769px) {
+        .hamburger {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-text {
+        font-size: 0.9rem; /* Even smaller on very small screens */
+        max-width: 100px; /* Limit width if needed */
+        overflow: hidden; /* Hide overflow */
+        text-overflow: ellipsis; /* Add ellipsis (...) */
+    }
+}
