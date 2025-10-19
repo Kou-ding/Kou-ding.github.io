@@ -1,7 +1,7 @@
 /* Header and navigation */
 header {
-    background: rgb(20, 20, 20, 0.9);
-    color: white;
+    background: var(--header-bg);
+    color: var(--header-text-color);
     padding: 1rem 0;
     position: fixed;
     width: 100%;
@@ -41,7 +41,7 @@ nav {
     font-size: 1.5rem;
     font-weight: bold;
     /* Adjust color if needed, though header color is white */
-    color: white;
+    color: var(--header-text-color);
 }
 
 .nav-links {
@@ -51,7 +51,7 @@ nav {
 }
 
 .nav-links a {
-    color: white;
+    color: var(--header-text-color);
     text-decoration: none;
     transition: opacity 0.3s ease;
 }
@@ -60,3 +60,42 @@ nav {
     opacity: 0.8;
 }
 
+/* Style the theme toggle button */
+.theme-toggle-btn {
+    background: none; /* Remove default background */
+    border: none; /* Remove default border */
+    color: var(--header-text-color); /* Icon color */
+    cursor: pointer; /* Show pointer cursor */
+    padding: 0.5rem; /* Base padding for click area */
+    margin: 0 0.5rem; /* Optional: space around the button */
+    border-radius: 50%; /* Make the visible part circular */
+    display: flex; /* Center the icon */
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem; /* Adjust icon size */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+/* Add a larger, transparent tap range using ::before */
+.theme-toggle-btn::before {
+    content: '';
+    position: absolute;
+    width: 44px; /* Desired tap area width (e.g., 36px button + 8px padding) */
+    height: 44px; /* Desired tap area height */
+    /* Calculate position to center the tap area on the button */
+    /* Assuming 36px visible button + 4px padding = 44px total desired area */
+    /* Button padding is 0.5rem (8px) -> visible area is 28px + 4px icon = 32px approx -> adjust if needed */
+    /* Let's target 44px total click area */
+    /* So, offset = (44 - actual_visible_button_height) / 2 */
+    /* Actual visible button height includes padding + border-radius visual area */
+    /* A simpler approach: use transform to center based on ::before dimensions */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Put the tap area behind the visible button */
+}
+
+/* Optional: Add a background on hover for better visual feedback */
+.theme-toggle-btn:hover {
+    background-color: var(--header-theme-toggle-hover);
+}

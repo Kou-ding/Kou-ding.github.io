@@ -9,6 +9,7 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 
     <!-- Link the same CSS files as index.html -->
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/components/header.css">
     <link rel="stylesheet" href="css/components/footer.css">
@@ -21,11 +22,17 @@
     <header>
         <nav>
             <div class="logo">
-                <div class="logo-img"></div>
-                <span class="logo-text">Kou-ding's Projects</span>
+                <div class="logo-img"></div> <!-- Div styled with background image -->
+                <span class="logo-text">Kou-ding's Projects</span> <!-- The text next to the image -->
             </div>
+
+            <button id="theme-toggle" class="theme-toggle-btn">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
+                <li><a href="dotfiles.html">Dotfiles</a></li>
                 <li><a href="about.html">About Me</a></li>
             </ul>
         </nav>
@@ -52,7 +59,7 @@
                     <div class="github-metrics">
                         <h2>My Stats</h2>
                         <!-- Embed the GitHub Stats image -->
-                        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Kou-ding&layout=pie&theme=tokyonight&langs_count=10" alt="Kou-ding's Top Languages" class="github-stats-image">
+                        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Kou-ding&layout=pie&theme=gruvbox&langs_count=10" alt="Kou-ding's Top Languages" class="github-stats-image">
                     </div>
 
                     <!-- CV Download Link -->
@@ -68,5 +75,8 @@
     <footer>
         <p>&copy; 2025 Kou-ding <i class="fa-brands fa-github"></i>. All rights reserved.</p>
     </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
 </body>
 </html>

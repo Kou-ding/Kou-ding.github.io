@@ -4,12 +4,80 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root {
+    /* Background */
+    --bg-color: #f4f4f4;
+    --bg-color-2: #ffffff;
+    
+    /* Text */
+    --text-color: #333; /* Normal text */
+    --text-color-2: #333; /* Titles */
+
+    /* Header */
+    --header-bg: rgba(20, 20, 20, 0.9);
+    --header-text-color: #ffffff;
+    --header-theme-toggle-hover:  rgba(255, 255, 255, 0.1);
+
+    /* Cards */
+    --card-bg: #ffffff;
+    --card-hover-shadow: rgba(0,0,0,0.15);
+
+    /* Buttons */
+    --btn-bg: #689d6a;
+    --btn-hover-bg: #8ec07c;
+    --btn-hover-shadow: rgba(0,0,0,0.4);
+    --btn-text-color: #ffffff;
+
+    /* GitHub Button */
+    --github-btn-bg: #458588;
+    --github-btn-hover-bg: #83a598;
+
+    /* Hero Section */
+    --hero-text-color: #ffffff;
+
+    /* Profile Picture Border */
+    --pfp-border: #ddd;
+}
+
+.dark-mode {
+    /* Background */
+    --bg-color: rgb(24, 24, 24);
+    --bg-color-2: rgb(28, 28, 28);
+
+    /* Text */
+    --text-color: #b3b3b3;
+    --text-color-2: #ffffff;
+
+    /* Header */
+    --header-bg: rgba(20, 20, 20, 0.9);
+    --header-text-color: #ffffff;
+
+    /* Cards */
+    --card-bg: #282828;
+    --card-hover-shadow: rgba(0,0,0,0.15);
+
+    /* Buttons */
+    --btn-bg: #689d6a;
+    --btn-hover-bg: #8ec07c;
+    --btn-hover-shadow: rgba(0,0,0,0.4);
+    --btn-text-color: #ffffff;
+
+    /* GitHub Button */
+    --github-btn-bg: #458588;
+    --github-btn-hover-bg: #83a598;
+
+    /* Hero Section */
+    --hero-text-color: #ffffff;
+
+    /* Profile Picture Border */
+    --pfp-border: #444;
+}
 
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
+    color: var(--text-color); /* Page wide default text color */
+    background-color: var(--bg-color);
 }
 
 /* Main content */
@@ -30,7 +98,7 @@ main {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
+    color: var(--hero-text-color);
 }
 
 /* Pseudo-element for background overlay */
@@ -41,7 +109,7 @@ main {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.4); /* Black with 40% opacity */
+    background-color: rgba(24, 24, 24, 0.7); /* Black with 40% opacity */
     z-index: 1; /* Ensure it's behind the content */
 }
 
@@ -66,8 +134,8 @@ main {
 /* Buttons */
 .btn {
     display: inline-block;
-    background: #ff6b6b;
-    color: white;
+    background: var(--btn-bg);
+    color: var(--btn-text-color);
     padding: 12px 30px;
     text-decoration: none;
     border-radius: 25px;
@@ -76,9 +144,9 @@ main {
 }
 
 .btn:hover {
-    background: #ff5252;
+    background: var(--btn-hover-bg);
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+    box-shadow: 0 5px 15px var(--btn-hover-shadow);
 }
 
 /* Containers and sections */
@@ -93,14 +161,14 @@ main {
 }
 
 .section:nth-child(even) {
-    background: white;
+    background: var(--bg-color-2);
 }
 
 .section h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: #333;
+    color: var(--text-color-2);
 }
 
 /* Cards */
@@ -110,23 +178,39 @@ main {
     gap: 2rem;
     margin-top: 2rem;
 }
-
 .card {
-    background: white;
+    background: var(--card-bg);
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 30px var(--card-hover-shadow);
+}
+/* Card headings */
+.card h3 {
+    color: #458588;
+    margin-bottom: 1rem;
 }
 
-.card h3 {
-    color: #667eea;
-    margin-bottom: 1rem;
+/* GitHub button style */
+.btn-github {
+    display: inline-block;
+    background-color: var(--github-btn-bg);
+    color: var(--btn-text-color);
+    padding: 8px 16px; /* Adjust padding as needed */
+    text-decoration: none; /* Remove underline from link */
+    border-radius: 6px; /* Rounded edges */
+    font-size: 0.9rem; /* Adjust size as needed */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+    margin-top: 1rem; /* Apply the margin here instead of on the h5 */
+}
+
+.btn-github:hover {
+    background-color: var(--github-btn-hover-bg); /* Slightly lighter gray on hover */
+    opacity: 0.9; /* Optional: Slight opacity change on hover */
 }
 
 /* Animations */

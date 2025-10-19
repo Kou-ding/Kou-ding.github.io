@@ -1,17 +1,3 @@
-/* Reset and base styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
-}
-
 /* Specific styles for the about page content */
 .about-section {
     padding: 6rem 0; /* Adjust padding as needed */
@@ -38,8 +24,8 @@ body {
     display: flex; /* Helps center the image inside */
     align-items: center;
     justify-content: center;
-    border: 4px solid #ddd; /* Optional: Add a subtle border */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: Add a shadow */
+    border: 4px solid var(--pfp-border); /* Optional: Add a subtle border */
+    box-shadow: 0 4px 8px var(--card-hover-shadow); /* Optional: Add a shadow */
 }
 
 .profile-pic {
@@ -52,7 +38,7 @@ body {
 .profile-name {
     font-size: 2.5rem; /* Adjust size as needed */
     margin-bottom: 1rem;
-    color: #333; /* Adjust color as needed */
+    color: var(--text-color-2); /* Adjust color as needed */
 }
 
 /* Description Styles */
@@ -60,7 +46,7 @@ body {
     font-size: 1.2rem; /* Adjust size as needed */
     line-height: 1.7; /* Improve readability */
     margin-bottom: 2rem;
-    color: #666; /* Adjust color as needed */
+    color: var(--text-color); /* Adjust color as needed */
     max-width: 600px; /* Optional: Limit description width */
     margin-left: auto;
     margin-right: auto;
@@ -74,56 +60,17 @@ body {
 .github-metrics h2 {
     font-size: 1.8rem; /* Adjust size as needed */
     margin-bottom: 1rem;
-    color: #333; /* Adjust color as needed */
+    color: var(--text-color-2); /* Adjust color as needed */
 }
 
 .github-stats-image {
     max-width: 100%; /* Ensure image doesn't overflow container */
     height: auto; /* Maintain aspect ratio */
     border-radius: 8px; /* Optional: Slight rounding for the stats box */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: Add shadow */
+    box-shadow: 0 2px 5px var(--card-hover-shadow); /* Optional: Add shadow */
 }
 
 /* CV Button Styles */
 .cv-section {
     margin-top: 2rem; /* Add space above the button */
-}
-
-
-/* Buttons */
-.btn {
-    display: inline-block;
-    background: #ff6b6b;
-    color: white;
-    padding: 12px 30px;
-    text-decoration: none;
-    border-radius: 25px;
-    transition: all 0.3s ease;
-    animation: fadeInUp 1s ease 0.6s both;
-}
-
-.btn:hover {
-    background: #ff5252;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
-}
-
-.btn-cv {
-    /* Inherits styles from the general .btn class defined in styles.css */
-    /* You can add specific styles here if needed, e.g., different color */
-    /* background: #4CAF50; */
-    font-size: 1.1rem; /* Adjust size as needed */
-    padding: 15px 40px; /* Adjust padding as needed */
-}
-
-/* Animations */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
