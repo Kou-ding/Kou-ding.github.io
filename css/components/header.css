@@ -1,7 +1,7 @@
 /* Header and navigation */
 header {
-    background: var(--header-bg);
-    color: var(--header-text-color);
+    background: var(--header-bg); /* Use the CSS variable */
+    color: var(--header-text-color); /* Use the CSS variable */
     padding: 1rem 0;
     position: fixed;
     width: 100%;
@@ -12,60 +12,50 @@ header {
 
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Distribute main groups: left and right */
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 2rem; /* Ensure some padding on all screen sizes */
+    /* Add responsive padding */
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
-/* Style the logo container */
-.logo {
+
+/* Container for the logo image and text - this will be on the left */
+.logo-container {
     display: flex;
     align-items: center; /* Align image and text vertically */
     gap: 0.5rem; /* Space between image and text */
+    /* This container will now be pushed to the left by space-between */
+    flex-shrink: 0; /* Prevent the logo from shrinking if space is tight */
 }
 
 /* Style the logo image */
 .logo-img {
-    width: 40px; /* Adjust size */
-    height: 40px; /* Adjust size */
-    background-image: url('../../images/pfp.png'); 
-    border-radius: 5px; /* Adjust the value (e.g., 5px, 10%, 50% for circle) */
-    background-size: cover; /* Cover the div area */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Don't repeat */
+    width: 40px;
+    height: 40px;
+    background-image: url('../../images/pfp.png');
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* Style the logo text */
 .logo-text {
-    font-size: 1.5rem;
+    font-size: 1.2rem; /* Smaller text on mobile */
     font-weight: bold;
-    /* Adjust color if needed, though header color is white */
-    color: var(--header-text-color);
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
-
-.nav-links a {
-    color: var(--header-text-color);
-    text-decoration: none;
-    transition: opacity 0.3s ease;
-}
-
-.nav-links a:hover {
-    opacity: 0.8;
+    color: var(--header-text-color); /* Use the CSS variable */
+    white-space: nowrap; /* Prevent text from wrapping */
 }
 
 /* Style the theme toggle button */
 .theme-toggle-btn {
-    background: none; /* Remove default background */
-    border: none; /* Remove default border */
-    color: var(--header-text-color); /* Icon color */
-    cursor: pointer; /* Show pointer cursor */
+    background: none;
+    border: none;
+    color: var(--header-text-color); /* Use the CSS variable */
+    cursor: pointer;
     padding: 0.5rem; /* Base padding for click area */
     margin: 0 0.5rem; /* Optional: space around the button */
     border-radius: 50%; /* Make the visible part circular */
@@ -74,21 +64,15 @@ nav {
     justify-content: center;
     font-size: 1.2rem; /* Adjust icon size */
     transition: background-color 0.3s ease; /* Smooth background transition */
+    flex-shrink: 0; /* Prevent the button from shrinking */
 }
 
 /* Add a larger, transparent tap range using ::before */
 .theme-toggle-btn::before {
     content: '';
     position: absolute;
-    width: 44px; /* Desired tap area width (e.g., 36px button + 8px padding) */
+    width: 44px; /* Desired tap area width */
     height: 44px; /* Desired tap area height */
-    /* Calculate position to center the tap area on the button */
-    /* Assuming 36px visible button + 4px padding = 44px total desired area */
-    /* Button padding is 0.5rem (8px) -> visible area is 28px + 4px icon = 32px approx -> adjust if needed */
-    /* Let's target 44px total click area */
-    /* So, offset = (44 - actual_visible_button_height) / 2 */
-    /* Actual visible button height includes padding + border-radius visual area */
-    /* A simpler approach: use transform to center based on ::before dimensions */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -97,8 +81,46 @@ nav {
 
 /* Optional: Add a background on hover for better visual feedback */
 .theme-toggle-btn:hover {
-    background-color: var(--header-theme-toggle-hover);
+    background-color: var(--header-theme-toggle-hover); /* Use the CSS variable */
 }
+
+/* Container for the nav links - this will be on the right */
+.nav-links-container {
+    display: flex;
+    align-items: center; /* Align links vertically */
+    flex-shrink: 0; /* Prevent the links container from shrinking */
+}
+
+/* Adjust nav-links container */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem; /* Slightly smaller gap on mobile */
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--header-text-color); /* Use the CSS variable */
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+    font-size: 1rem; /* Slightly smaller text on mobile */
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+/* Hamburger menu icon (visible only on mobile) */
+.hamburger {
+    display: none; /* Hide hamburger by default on larger screens */
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--header-text-color);
+    margin-left: 1rem; /* Add some space from the theme toggle */
+}
+
 
 /* Media Query for Mobile Devices */
 @media (max-width: 768px) {
@@ -121,7 +143,12 @@ nav {
         font-size: 0.9rem; /* Further reduce link text size */
     }
 
-    /* Example: Hide nav links and show a hamburger menu */
+    /* Show the hamburger menu icon */
+    .hamburger {
+        display: block; /* Show hamburger only on mobile */
+    }
+
+    /* Hide nav links and show a hamburger menu */
     .nav-links {
         display: none; /* Hide the links initially on mobile */
         position: absolute; /* Position the menu overlay */
@@ -145,20 +172,6 @@ nav {
         margin: 0.5rem 0; /* Add space between mobile links */
     }
 
-    /* Add a hamburger icon */
-    .hamburger {
-        display: block; /* Show hamburger only on mobile */
-        cursor: pointer;
-        font-size: 1.5rem;
-        color: var(--header-text-color);
-    }
-
-    /* Hide hamburger on larger screens */
-    @media (min-width: 769px) {
-        .hamburger {
-            display: none;
-        }
-    }
 }
 
 @media (max-width: 480px) {
