@@ -1,7 +1,7 @@
 from http.server import SimpleHTTPRequestHandler, HTTPServer
 import os
 
-PORT = 8000
+PORT = 8042
 
 class MyHandler(SimpleHTTPRequestHandler):
     def do_GET(self):
@@ -9,6 +9,7 @@ class MyHandler(SimpleHTTPRequestHandler):
         routes = {
             "/": "index.html",
             "/index": "index.html",
+            "/notes": "uni_notes.html",
             "/about": "about.html",
             "/dotfiles": "dotfiles.html"
         }
