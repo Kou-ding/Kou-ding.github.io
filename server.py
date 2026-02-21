@@ -9,7 +9,7 @@ class MyHandler(SimpleHTTPRequestHandler):
         routes = {
             "/": "index.html",
             "/index": "index.html",
-            "/notes": "uni_notes.html",
+            "/notes": "notes.html",
             "/about": "about.html",
             "/dotfiles": "dotfiles.html"
         }
