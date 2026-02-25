@@ -24,6 +24,18 @@
     background-color: var(--card-bg); /* Use theme variable for background */
 }
 
+/* Mobile phone image ordering */
+@media (max-width: 600px) {
+    .dotfile-entry {
+        flex-direction: column;
+    }
+    
+    .dotfile-image {
+        order: -1; /* Critical: moves image to top */
+        margin-bottom: 0; /* Reset any bottom margins */
+    }
+}
+
 /* Style for the info section (text and button) */
 .dotfile-info {
     flex: 1; /* Take up available space */
