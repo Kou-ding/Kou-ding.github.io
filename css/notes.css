@@ -16,12 +16,25 @@
 .note-entry {
     display: flex;
     flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    row-gap: 0.5rem;
     align-items: center; /* Vertically center items */
     margin-bottom: 3rem; /* Space between entries */
     padding: 1rem; /* Internal padding */
     border: 1px solid var(--pfp-border); /* Use theme variable for border */
     border-radius: 8px; /* Rounded corners */
     background-color: var(--card-bg); /* Use theme variable for background */
+}
+
+/* Mobile phone image ordering */
+@media (max-width: 600px) {
+    .note-entry {
+        flex-direction: column;
+    }
+    
+    .note-image {
+        order: -1; /* Critical: moves image to top */
+        margin-bottom: 0; /* Reset any bottom margins */
+    }
 }
 
 /* Style for the info section (text and button) */
@@ -55,6 +68,7 @@
     flex: 1; /* Take up available space */
     min-width: 250px; /* Minimum width before wrapping */
     text-align: center; /* Center the image */
+    /* order: -1; Move image before text on smaller screens */
 }
 
 .note-image img {
