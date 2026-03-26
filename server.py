@@ -11,7 +11,8 @@ class MyHandler(SimpleHTTPRequestHandler):
             "/index": "index.html",
             "/notes": "notes.html",
             "/about": "about.html",
-            "/dotfiles": "dotfiles.html"
+            "/dotfiles": "dotfiles.html",
+            "/blog": "blog.html"
         }
 
         # Check if this is a specific route
