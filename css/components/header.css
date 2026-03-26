@@ -50,40 +50,6 @@ nav {
     white-space: nowrap; /* Prevent text from wrapping */
 }
 
-/* Style the theme toggle button */
-.theme-toggle-btn {
-    background: none;
-    border: none;
-    color: var(--header-text-color); /* Use the CSS variable */
-    cursor: pointer;
-    padding: 0.5rem; /* Base padding for click area */
-    margin: 0 0.5rem; /* Optional: space around the button */
-    border-radius: 50%; /* Make the visible part circular */
-    display: flex; /* Center the icon */
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem; /* Adjust icon size */
-    transition: background-color 0.3s ease; /* Smooth background transition */
-    flex-shrink: 0; /* Prevent the button from shrinking */
-}
-
-/* Add a larger, transparent tap range using ::before */
-.theme-toggle-btn::before {
-    content: '';
-    position: absolute;
-    width: 44px; /* Desired tap area width */
-    height: 44px; /* Desired tap area height */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1; /* Put the tap area behind the visible button */
-}
-
-/* Optional: Add a background on hover for better visual feedback */
-.theme-toggle-btn:hover {
-    background-color: var(--header-theme-toggle-hover); /* Use the CSS variable */
-}
-
 /* Container for the nav links - this will be on the right */
 .nav-links-container {
     display: flex;

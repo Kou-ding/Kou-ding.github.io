@@ -1,0 +1,50 @@
+/* Wide Card */
+.wide-card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 3rem;
+    padding: 1rem;
+    border: 1px solid var(--pfp-border);
+    border-radius: 8px;
+    background-color: var(--card-bg);
+}
+
+.wide-card-info {
+    flex: 1;
+    min-width: 250px;
+    padding-right: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+.wide-card-title {
+    color: var(--text-color-2);
+    margin-bottom: 0.5rem;
+}
+
+.wide-card-image {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+}
+
+.wide-card-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile phone image ordering */
+@media (max-width: 600px) {
+    .wide-card {
+        flex-direction: column;
+    }
+    
+    .wide-card-image {
+        order: -1; /* Critical: moves image to top */
+        margin-bottom: 0; /* Reset any bottom margins */
+    }
+}

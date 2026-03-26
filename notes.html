@@ -10,15 +10,16 @@
 
     <!-- Link the same CSS files as index.html -->
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/notes.css">
+    <link rel="stylesheet" href="css/wide-card.css">
     <link rel="stylesheet" href="css/components/header.css">
     <link rel="stylesheet" href="css/components/footer.css">
 
     <!-- Include Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Iceberg&display=swap">
 </head>
 <body>
-    <!-- Header (same as index.html) -->
+    <!-- Header Section -->
     <header>
         <nav>
             <div class="logo-container">
@@ -26,17 +27,14 @@
                 <span class="logo-text">Kou-ding's Projects</span>
             </div>
 
-            <button id="theme-toggle" class="theme-toggle-btn">
-                <i class="fa-solid fa-moon"></i>
-            </button>
-
             <!-- Navigation links container (hidden on mobile by default) -->
             <div class="nav-links-container">
                 <ul class="nav-links" id="nav-links">
-                    <li><a href="/index">Home</a></li>
-                    <li><a href="/notes">Notes</a></li>
-                    <li><a href="/dotfiles">Dotfiles</a></li>
-                    <li><a href="/about">About Me</a></li>
+                    <li><a href="/index"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="/notes"><i class="fa-solid fa-note-sticky"></i> Notes</a></li>
+                    <li><a href="/blog"><i class="fa-solid fa-square-rss"></i> Blog</a></li>
+                    <li><a href="/dotfiles"><i class="fa-solid fa-palette"></i> Dotfiles</a></li>
+                    <li><a href="/about"><i class="fa-solid fa-circle-user"></i> About Me</a></li>
                 </ul>
             </div>
             
@@ -50,35 +48,49 @@
     <main>
         <section class="section">
             <div class="container">
-                <h2>My Notes</h2>
-                <p style="text-align: center; margin-bottom: 2rem;">
+                <h2 class="page-name">My Notes</h2>
+                <p class="page-description">
                     Handwritten notes regarding various subjects of the Electrical and Computer Engineering (ECE) curriculum at the Aristotle University of Thessaloniki (AUTH).
                 </p>
 
                 <!-- Note Entry 1 -->
-                <div class="note-entry">
-                    <div class="note-info">
-                        <h3>Συστήματα Αυτομάτου Ελέγχου 1</h3>
-                        <p>Περιέχει λυμένες ασκήσεις επιλογής ελεγκτή και μια γενική επανάληψη εφ'όλης της ύλης. Υστερεί σε διαγράμματα φάσης.</p>
-                        <a href="misc/notes/sae1.pdf" download class="btn btn-download"><i class="fa-solid fa-download"></i>Download PDF</a>
+                <div class="wide-card">
+                    <div class="wide-card-info">
+                        <h3 class="wide-card-title">Control Systems 1</h3>
+                        <p>Contains solved exercises on control systems as well as a general review of the entire syllabus. It lacks in phase diagrams.</p>
+                        <a href="misc/notes/sae1.pdf" class="btn btn-download"><i class="fa-solid fa-file-pdf"></i> Open PDF</a>
                     </div>
-                    <div class="note-image">
-                        <img src="misc/notes/sae1.png" alt="Συστήματα Αυτομάτου Ελέγχου 1 Notes">
+                    <div class="wide-card-image">
+                        <img src="misc/notes/sae1.png" alt="Control Systems 1 Notes">
                     </div>
                 </div>
 
-                <hr class="divider"> <!-- Optional separator -->
+                <hr class="divider">
                 
                 <!-- Note Entry 2 -->
-                <div class="note-entry">
-                    <div class="note-info">
-                        <h3>Συστήματα Αυτομάτου Ελέγχου 2</h3>
-                        <p>Mini guide για ΣΑΕ 2 με όλες τις σημαντικές έννοιες σε μορφή παραδειγμάτων.
+                <div class="wide-card">
+                    <div class="wide-card-info">
+                        <h3 class="wide-card-title">Control Systems 2</h3>
+                        <p>Mini guide on Control Systems 2 covering all important notions through examples.
                         </p>
-                        <a href="misc/notes/sae2.pdf" download class="btn btn-download"><i class="fa-solid fa-download"></i>Download PDF</a>
+                        <a href="misc/notes/sae2.pdf" class="btn btn-download"><i class="fa-solid fa-file-pdf"></i> Open PDF</a>
                     </div>
-                    <div class="note-image">
-                        <img src="misc/notes/sae2.png" alt="Συστήματα Αυτομάτου Ελέγχου 2 Notes">
+                    <div class="wide-card-image">
+                        <img src="misc/notes/sae2.png" alt="Control Systems 2 Notes">
+                    </div>
+                </div>
+
+                <hr class="divider">
+
+                <div class="wide-card">
+                    <div class="wide-card-info">
+                        <h3 class="wide-card-title">Electrical Circuits 2</h3>
+                        <p>Short guide on the core concepts of Electrical Circuits 2.</p>
+                        </p>
+                        <a href="misc/notes/k2.pdf" class="btn btn-download"><i class="fa-solid fa-file-pdf"></i> Open PDF</a>
+                    </div>
+                    <div class="wide-card-image">
+                        <img src="misc/notes/k2.png" alt="K2 Notes">
                     </div>
                 </div>
             </div>

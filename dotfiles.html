@@ -10,12 +10,13 @@
 
     <!-- Styling through CSS -->
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/dotfiles.css">
+    <link rel="stylesheet" href="css/wide-card.css">
     <link rel="stylesheet" href="css/components/header.css">
     <link rel="stylesheet" href="css/components/footer.css">
 
     <!-- Include Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Iceberg&display=swap">
 </head>
 <body>
     <header>
@@ -25,17 +26,14 @@
                 <span class="logo-text">Kou-ding's Projects</span>
             </div>
 
-            <button id="theme-toggle" class="theme-toggle-btn">
-                <i class="fa-solid fa-moon"></i>
-            </button>
-
             <!-- Navigation links container (hidden on mobile by default) -->
             <div class="nav-links-container">
                 <ul class="nav-links" id="nav-links">
-                    <li><a href="/index">Home</a></li>
-                    <li><a href="/notes">Notes</a></li>
-                    <li><a href="/dotfiles">Dotfiles</a></li>
-                    <li><a href="/about">About Me</a></li>
+                    <li><a href="/index"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="/notes"><i class="fa-solid fa-note-sticky"></i> Notes</a></li>
+                    <li><a href="/blog"><i class="fa-solid fa-square-rss"></i> Blog</a></li>
+                    <li><a href="/dotfiles"><i class="fa-solid fa-palette"></i> Dotfiles</a></li>
+                    <li><a href="/about"><i class="fa-solid fa-circle-user"></i> About Me</a></li>
                 </ul>
             </div>
             
@@ -49,38 +47,38 @@
     <main>
         <section class="section">
             <div class="container">
-                <h2>My Dotfiles</h2>
-                <p style="text-align: center; margin-bottom: 2rem;">
+                <h3 class="page-name">My Dotfiles</h3>
+                <p class="page-description">
                     A collection of configuration files (dotfiles) for various tools and environments.
                 </p>
 
-                <!-- Example Dotfile Entry 1 -->
-                <div class="dotfile-entry">
-                    <div class="dotfile-info">
-                        <h3>Sway config</h3>
+                <!-- Dotfile Entry 1 -->
+                <div class="wide-card">
+                    <div class="wide-card-info">
+                        <h3 class="wide-card-title">Sway config</h3>
                         <p>My customized Sway configuration file, including keybindings, workspace settings, and appearance tweaks.</p>
-                        <a href="misc/dotfiles/sway/config" download class="btn btn-download"><i class="fa-solid fa-download"></i> Download Sway config</a>
+                        <a href="misc/dotfiles/sway/config" class="btn"><i class="fa-solid fa-download"></i> Download Sway config</a>
                     </div>
-                    <div class="dotfile-image">
+                    <div class="wide-card-image">
                         <img src="misc/dotfiles/sway/sway-showcase.png" alt="Screenshot of Sway configuration">
                     </div>
                 </div>
 
-                <hr class="divider"> <!-- Optional separator -->
+                <hr class="divider">
 
-                <!-- Example Dotfile Entry 2 -->
-                <div class="dotfile-entry">
-                    <div class="dotfile-info">
-                        <h3>Waybar</h3>
+                <!-- Dotfile Entry 2 -->
+                <div class="wide-card">
+                    <div class="wide-card-info">
+                        <h3 class="wide-card-title">Waybar</h3>
                         <p>My customized Waybar configuration file, including module settings, appearance tweaks, and keybindings.</p>
-                        <a href="misc/dotfiles/waybar/config" download class="btn btn-download"><i class="fa-solid fa-download"></i> Download Waybar config</a>
+                        <a href="misc/dotfiles/waybar/waybar.zip" class="btn"><i class="fa-solid fa-download"></i> Download Waybar config</a>
                     </div>
-                    <div class="dotfile-image">
+                    <div class="wide-card-image">
                         <img src="misc/dotfiles/waybar/waybar-showcase.png" alt="Screenshot of Waybar configuration">
                     </div>
                 </div>
 
-                <hr class="divider"> <!-- Optional separator -->
+                <hr class="divider">
 
                 <p style="text-align: center; margin: 2rem 0;">More to come...</p>
             </div>

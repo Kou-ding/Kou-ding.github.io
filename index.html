@@ -10,11 +10,14 @@
 
     <!-- Styling through CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="css/hero.css">
     <link rel="stylesheet" href="css/components/header.css">
     <link rel="stylesheet" href="css/components/footer.css">
 
     <!-- Include Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Iceberg&display=swap">
 </head>
 <body>
     <header>
@@ -24,17 +27,14 @@
                 <span class="logo-text">Kou-ding's Projects</span>
             </div>
 
-            <button id="theme-toggle" class="theme-toggle-btn">
-                <i class="fa-solid fa-moon"></i>
-            </button>
-
             <!-- Navigation links container (hidden on mobile by default) -->
             <div class="nav-links-container">
                 <ul class="nav-links" id="nav-links">
-                    <li><a href="/index">Home</a></li>
-                    <li><a href="/notes">Notes</a></li>
-                    <li><a href="/dotfiles">Dotfiles</a></li>
-                    <li><a href="/about">About Me</a></li>
+                    <li><a href="/index"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="/notes"><i class="fa-solid fa-note-sticky"></i> Notes</a></li>
+                    <li><a href="/blog"><i class="fa-solid fa-square-rss"></i> Blog</a></li>
+                    <li><a href="/dotfiles"><i class="fa-solid fa-palette"></i> Dotfiles</a></li>
+                    <li><a href="/about"><i class="fa-solid fa-circle-user"></i> About Me</a></li>
                 </ul>
             </div>
             
@@ -58,22 +58,22 @@
         <!-- Personal Repositories Section -->
         <section id="repositories" class="section">
             <div class="container">
-                <h2>Personal Repositories <i class="fa-solid fa-user"></i></h2>
+                <h2 class="container-title">Personal Repositories <i class="fa-solid fa-user"></i></h2>
                 <div class="cards">
                     <div class="card">
                         <h3>Arch-Tutorial</h3>
                         <p>A very detailed tutorial bundle on mastering various aspects of linux and programming.</p>
-                        <a href="https://github.com/Kou-ding/Arch-Tutorial" class="btn-github"><i class="fa-brands fa-github"></i> Github link</a>
+                        <a href="https://github.com/Kou-ding/Arch-Tutorial" class="btn"><i class="fa-brands fa-github"></i> Github link</a>
                     </div>
                     <div class="card">
                         <h3>Mushroom-Classifier</h3>
                         <p>A neural networked that specializes in distinguishing between poisonous and edible mushrooms.</p>
-                        <a href="https://github.com/Kou-ding/Mushroom-Classifier" class="btn-github"><i class="fa-brands fa-github"></i> Github link</a>
+                        <a href="https://github.com/Kou-ding/Mushroom-Classifier" class="btn"><i class="fa-brands fa-github"></i> Github link</a>
                     </div>
                     <div class="card">
                         <h3>Arduino-Projects</h3>
                         <p>A library of several well documented arduino projects for educational purposes.</p>
-                        <a href="https://github.com/Kou-ding/Arduino-Projects" class="btn-github"><i class="fa-brands fa-github"></i> Github link</a>
+                        <a href="https://github.com/Kou-ding/Arduino-Projects" class="btn"><i class="fa-brands fa-github"></i> Github link</a>
                     </div>
                 </div>
             </div>
@@ -82,72 +82,72 @@
         <!-- University Projects Section -->
         <section id="projects" class="section">
             <div class="container">
-                <h2>University Projects <i class="fa-solid fa-graduation-cap"></i></h2>
+                <h2 class="container-title">University Projects <i class="fa-solid fa-graduation-cap"></i></h2>
                 <div class="cards">
                     <div class="card">
                         <h3>Computational-Intelligence</h3>
                         <p>Notes and assignments of the university course: "Computational Intelligence".</p>
-                        <a href="https://github.com/Kou-ding/Computational-Intelligence" class="btn-github"><i class="fa-brands fa-github"></i> Github link</a>
+                        <a href="https://github.com/Kou-ding/Computational-Intelligence" class="btn"><i class="fa-brands fa-github"></i> Github link</a>
                     </div>
                     <div class="card">
                         <h3>Ourama</h3>
                         <p>A hybrid digital/physical Roguelike RPG Deckbuilder game that livens up the boardgame basis by making it interactive and adding graphics to the mix. </p>
-                        <a href="https://github.com/Kou-ding/Ourama" class="btn-github"><i class="fa-brands fa-github"></i> Github link</a>
+                        <a href="https://github.com/Kou-ding/Ourama" class="btn"><i class="fa-brands fa-github"></i> Github link</a>
                     </div>
                     <div class="card">
                         <h3>cookey</h3>
                         <p>An android cooking application meant to store recipes, create shopping lists and unify the two by automatically adjusting the ingredients count of the user.</p>
-                        <a href="https://github.com/Kou-ding/cookey" class="btn-github"><i class="fa-brands fa-github"></i> Github link</a>
+                        <a href="https://github.com/Kou-ding/cookey" class="btn"><i class="fa-brands fa-github"></i> Github link</a>
                     </div>
                     <div class="card">
                         <h3>EvolutionaryGamesToolbox</h3>
                         <p>Notes and assignments of the university course: "Game Theory".</p>
-                        <a href="https://github.com/Kou-ding/EvolutionaryGamesToolbox" class="btn-github"><i class="fa-brands fa-github"></i> Github link</a>
+                        <a href="https://github.com/Kou-ding/EvolutionaryGamesToolbox" class="btn"><i class="fa-brands fa-github"></i> Github link</a>
                     </div>
                     <div class="card">
                         <h3>Machine-Learning</h3>
                         <p>Notes regarding the university course "Machine learning".</p>
-                        <a href="https://github.com/Kou-ding/Machine-Learning" class="btn-github"><i class="fa-brands fa-github"></i> Github link</a>
+                        <a href="https://github.com/Kou-ding/Machine-Learning" class="btn"><i class="fa-brands fa-github"></i> Github link</a>
                     </div>
                     <div class="card">
                         <h3>ParkKing</h3>
                         <p>The materialization of a concept application aiming to simplify parking in smart cities. It includes all three assignments of the course "Databases" throughout the semester.</p>
-                        <a href="https://github.com/Kou-ding/ParkKing" class="btn-github"><i class="fa-brands fa-github"></i> Github link</a>
+                        <a href="https://github.com/Kou-ding/ParkKing" class="btn"><i class="fa-brands fa-github"></i> Github link</a>
                     </div>
                     <div class="card">
                         <h3>CIFAR-10</h3>
                         <p>A PyTorch implementation of a neural network trained on the CIFAR-10 dataset. This is the second assignment of the course "Neural Networks - Deep Learning".</p>
-                        <a href="https://github.com/Kou-ding/CIFAR-10" class="btn-github"><i class="fa-brands fa-github"></i> Github link</a>
+                        <a href="https://github.com/Kou-ding/CIFAR-10" class="btn"><i class="fa-brands fa-github"></i> Github link</a>
                     </div>
                     <div class="card">
                         <h3>Graph-Minor</h3>
                         <p>The first out of four assignments of the course: "Parallel and Distributed systems".</p>
-                        <a href="https://github.com/Kou-ding/Graph-Minor" class="btn-github"><i class="fa-brands fa-github"></i> Github link</a>
+                        <a href="https://github.com/Kou-ding/Graph-Minor" class="btn"><i class="fa-brands fa-github"></i> Github link</a>
                     </div>
                     <div class="card">
                         <h3>Quick-select</h3>
                         <p>The second out of four assignments of the course: "Parallel and Distributed systems".</p>
-                        <a href="https://github.com/Kou-ding/Quick-select" class="btn-github"><i class="fa-brands fa-github"></i> Github link</a>
+                        <a href="https://github.com/Kou-ding/Quick-select" class="btn"><i class="fa-brands fa-github"></i> Github link</a>
                     </div>
                     <div class="card">
                         <h3>Ising</h3>
                         <p>The third out of four assignments of the course: "Parallel and Distributed systems".</p>
-                        <a href="https://github.com/Kou-ding/Ising" class="btn-github"><i class="fa-brands fa-github"></i> Github link</a>
+                        <a href="https://github.com/Kou-ding/Ising" class="btn"><i class="fa-brands fa-github"></i> Github link</a>
                     </div>
                     <div class="card">
                         <h3>tSNE-pds</h3>
                         <p>The fourth and final assignment of the course: "Parallel and distributed systems".</p>
-                        <a href="https://github.com/Kou-ding/tSNE-pds" class="btn-github"><i class="fa-brands fa-github"></i> Github link</a>
+                        <a href="https://github.com/Kou-ding/tSNE-pds" class="btn"><i class="fa-brands fa-github"></i> Github link</a>
                     </div>
                     <div class="card">
                         <h3>Real-Time-Embedded-Systems</h3>
                         <p>The Real time embedded systems assignment 2024.</p>
-                        <a href="https://github.com/Kou-ding/Real-Time-Embedded-Systems" class="btn-github"><i class="fa-brands fa-github"></i> Github link</a>
+                        <a href="https://github.com/Kou-ding/Real-Time-Embedded-Systems" class="btn"><i class="fa-brands fa-github"></i> Github link</a>
                     </div>
                     <div class="card">
                         <h3>Microprocessors-and-Peripherals</h3>
                         <p>The three assignments of the course: "Microprocessors and Peripherals".</p>
-                        <a href="https://github.com/Kou-ding/Microprocessors-and-Peripherals" class="btn-github"><i class="fa-brands fa-github"></i> Github link</a>
+                        <a href="https://github.com/Kou-ding/Microprocessors-and-Peripherals" class="btn"><i class="fa-brands fa-github"></i> Github link</a>
                     </div>
                 </div>
             </div>
@@ -156,11 +156,13 @@
         <!-- Games Section -->
         <section id="games" class="section">
             <div class="container">
-                <h2>My Games <i class="fa-solid fa-gamepad"></i></h2>
-                <div class="card">
-                    <h3>Aviator Parrot</h3>
-                    <p>A Flappy bird inspired game featuring a Parrot going through crystals.</p>
-                    <a href="https://kou-ding.github.io/Aviator-Parrot/" class="btn-github"><i class="fa-solid fa-play"></i> Play</a>
+                <h2 class="container-title">My Games <i class="fa-solid fa-gamepad"></i></h2>
+                <div class="cards">
+                    <div class="card">
+                        <h3>Aviator Parrot</h3>
+                        <p>A Flappy bird inspired game featuring a Parrot going through crystals.</p>
+                        <a href="https://kou-ding.github.io/Aviator-Parrot/" class="btn"><i class="fa-solid fa-play"></i> Play</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -168,7 +170,7 @@
         <!-- Contact Me Section -->
         <section id="contact" class="section">
             <div class="container">
-                <h2>Get In Touch</h2>
+                <h3>Get In Touch</h3>
                 <p style="text-align: center; font-size: 1.1rem;">
                     Would you like to collaborate on a project or have any questions? Feel free to reach out!
                 </p>

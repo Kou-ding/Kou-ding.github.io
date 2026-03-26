@@ -6,41 +6,6 @@
 }
 :root {
     /* Background */
-    --bg-color: #f4f4f4;
-    --bg-color-2: #ffffff;
-    
-    /* Text */
-    --text-color: #333; /* Normal text */
-    --text-color-2: #333; /* Titles */
-
-    /* Header */
-    --header-bg: rgba(20, 20, 20, 0.9);
-    --header-text-color: #ffffff;
-    --header-theme-toggle-hover:  rgba(255, 255, 255, 0.1);
-
-    /* Cards */
-    --card-bg: #ffffff;
-    --card-hover-shadow: rgba(0,0,0,0.15);
-
-    /* Buttons */
-    --btn-bg: #689d6a;
-    --btn-hover-bg: #8ec07c;
-    --btn-hover-shadow: rgba(0,0,0,0.4);
-    --btn-text-color: #ffffff;
-
-    /* GitHub Button */
-    --github-btn-bg: #458588;
-    --github-btn-hover-bg: #83a598;
-
-    /* Hero Section */
-    --hero-text-color: #ffffff;
-
-    /* Profile Picture Border */
-    --pfp-border: #ddd;
-}
-
-.dark-mode {
-    /* Background */
     --bg-color: rgb(24, 24, 24);
     --bg-color-2: rgb(28, 28, 28);
 
@@ -62,10 +27,6 @@
     --btn-hover-shadow: rgba(0,0,0,0.4);
     --btn-text-color: #ffffff;
 
-    /* GitHub Button */
-    --github-btn-bg: #458588;
-    --github-btn-hover-bg: #83a598;
-
     /* Hero Section */
     --hero-text-color: #ffffff;
 
@@ -74,10 +35,28 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Iceberg';
     line-height: 1.6;
-    color: var(--text-color); /* Page wide default text color */
+    color: var(--text-color);
     background-color: var(--bg-color);
+}
+
+/* Name & Description */
+.page-name {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color-2);
+}
+.page-description {
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Main content */
@@ -86,74 +65,16 @@ main {
     min-height: calc(100vh - 140px);
 }
 
-/* Hero section */
-.hero {
-    position: relative; /* Required for pseudo-element positioning */
-    background-image: url("../images/hero-image.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: var(--hero-text-color);
-}
-
-/* Pseudo-element for background overlay */
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(24, 24, 24, 0.7); /* Black with 40% opacity */
-    z-index: 1; /* Ensure it's behind the content */
-}
-
-/* Adjust content to be above the overlay */
-.hero-content {
-    position: relative;
-    z-index: 2;
-}
-
-.hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    animation: fadeInUp 1s ease;
-}
-
-.hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    animation: fadeInUp 0.5s ease 0.2s both;
-}
-
-/* Buttons */
-.btn {
-    display: inline-block;
-    background: var(--btn-bg);
-    color: var(--btn-text-color);
-    padding: 12px 30px;
-    text-decoration: none;
-    border-radius: 25px;
-    transition: all 0.3s ease;
-    animation: fadeInUp 0.6s ease 0.2s both;
-}
-
-.btn:hover {
-    background: var(--btn-hover-bg);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px var(--btn-hover-shadow);
-}
-
 /* Containers and sections */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
+}
+
+.container-title {
+    color: var(--text-color-2);
+    text-align: left;
 }
 
 .section {
@@ -164,53 +85,30 @@ main {
     background: var(--bg-color-2);
 }
 
-.section h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    color: var(--text-color-2);
-}
 
-/* Cards */
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-.card {
-    background: var(--card-bg);
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px var(--card-hover-shadow);
-}
-/* Card headings */
-.card h3 {
-    color: #458588;
-    margin-bottom: 1rem;
-}
-
-/* GitHub button style */
-.btn-github {
+/* Button style */
+.btn {
     display: inline-block;
-    background-color: var(--github-btn-bg);
+    background-color: var(--btn-bg);
     color: var(--btn-text-color);
-    padding: 8px 16px; /* Adjust padding as needed */
-    text-decoration: none; /* Remove underline from link */
-    border-radius: 6px; /* Rounded edges */
-    font-size: 0.9rem; /* Adjust size as needed */
-    transition: background-color 0.3s ease; /* Smooth hover transition */
-    margin-top: 1rem; /* Apply the margin here instead of on the h5 */
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+.btn:hover {
+    background-color: var(--btn-hover-bg);
+    opacity: 0.9;
 }
 
-.btn-github:hover {
-    background-color: var(--github-btn-hover-bg); /* Slightly lighter gray on hover */
-    opacity: 0.9; /* Optional: Slight opacity change on hover */
+/* Divider */
+.divider {
+    border: 0;
+    height: 1px;
+    background: var(--pfp-border);
+    margin: 2rem 0;
 }
 
 /* Animations */

@@ -1,0 +1,21 @@
+/* Profile Picture Styles */
+.pfp {
+    margin: 0 auto 1.5rem;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid var(--pfp-border);
+    box-shadow: 0 4px 8px var(--card-hover-shadow);
+}
+
+.pfp img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50% ;
+    display: block ;
+}
